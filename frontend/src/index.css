@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-secondary: #60a5fa;
+  --color-accent: #f43f5e;
+  --color-surface: #ffffff;
+  --color-background: #f0f4f8;
+  --color-neutral-soft: #f8fafc;
+  --color-text-main: #0f172a;
+  --color-text-muted: #64748b;
+
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.03);
+  --shadow-strong: 0 10px 30px rgba(59, 130, 246, 0.08);
+  --radius-pill: 20px;
+  --radius-card: 32px;
+}
+
+@layer base {
+  :root {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-main);
+    -webkit-font-smoothing: antialiased;
+    scrollbar-width: none;
+  }
+
+  :root::-webkit-scrollbar {
+    display: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .card-pill {
+    background-color: white;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-pill {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1.25rem 2rem;
+    border-radius: 24px;
+    font-weight: 800;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.15);
+  }
+
+  .input-pill {
+    width: 100%;
+    background-color: #ffffff;
+    border: 2px solid transparent;
+    padding: 1.25rem 1.5rem;
+    border-radius: 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    color: var(--color-text-main);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.01);
+  }
+
+  .input-pill:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.05);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-wave {
+  animation: wave 4s linear infinite;
+}
