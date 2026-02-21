@@ -7,6 +7,7 @@ A sleek, mobile-centric "Hydration App" style habit tracker with a fillable masc
 - **Mobile-First UI**: Minimalist design optimized for centered interaction.
 - **XP & Levels**: Gamified progress with real-time feedback.
 - **Player Directory**: Browse other high-achievers.
+- **Permanent Storage**: Integrated **PostgreSQL** via Railway for reliable data persistence.
 
 ## Deployment
 
